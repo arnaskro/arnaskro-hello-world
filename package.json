@@ -1,0 +1,32 @@
+{
+  "name": "arnaskro-hello-world",
+  "version": "1.0.0",
+  "description": "My first npm package",
+  "main": "build/index.js",
+  "scripts": {
+    "dev": "watch 'npm run build' src",
+    "build": "babel src -d build",
+    "test": "jest src",
+    "test:watch": "npm test -- --watch src",
+    "prepublish": "npm run build",
+    "release": "np"
+  },
+  "keywords": [
+    "hello",
+    "world"
+  ],
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  },
+  "author": "Arnas Kromelis <arnas@kromelis.lt> (https://kromelis.lt/)",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-latest": "^6.24.1",
+    "jest": "^23.1.0",
+    "np": "^3.0.4",
+    "watch": "^1.0.2"
+  }
+}
